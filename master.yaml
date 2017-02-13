@@ -136,7 +136,7 @@ coreos:
           -d \
           gcr.io/google_containers/hyperkube-amd64:__RELEASE__ \
             /hyperkube kubelet \
-            --address=$private_ipv4 \
+            --address=0.0.0.0 \
             --api-servers=http://127.0.0.1:8080 \
             --network-plugin-dir=/etc/kubernetes/cni/net.d \
             --network-plugin= \

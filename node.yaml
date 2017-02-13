@@ -120,7 +120,7 @@ coreos:
           gcr.io/google_containers/hyperkube-amd64:__RELEASE__ \
             /hyperkube kubelet \
             --containerized \
-            --address=$private_ipv4 \
+            --address=0.0.0.0 \
             --api-servers=http://__MASTER_IP__:8080 \
             --network-plugin-dir=/etc/kubernetes/cni/net.d \
             --network-plugin= \
